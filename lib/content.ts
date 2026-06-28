@@ -22,6 +22,7 @@ export type Service = {
     benefits: string[];
     isFeatured: boolean;
     displayOrder: number;
+    imageUrl: string;
 };
 export type Expertise = {
     title: string;
@@ -117,6 +118,7 @@ export const services: Service[] = [
         ],
         isFeatured: true,
         displayOrder: 1,
+        imageUrl: "/Solution - IT Infrastructure.png",
     },
     {
         title: "Cybersecurity",
@@ -138,6 +140,7 @@ export const services: Service[] = [
         ],
         isFeatured: true,
         displayOrder: 2,
+        imageUrl: "/Solution - Cybersecurity.png",
     },
     {
         title: "Computing Devices",
@@ -157,6 +160,7 @@ export const services: Service[] = [
         ],
         isFeatured: true,
         displayOrder: 3,
+        imageUrl: "/Solution - Computing Devices.png",
     },
     {
         title: "Managed Services",
@@ -179,6 +183,7 @@ export const services: Service[] = [
         ],
         isFeatured: true,
         displayOrder: 4,
+        imageUrl: "/Solution - Managed Services.png",
     },
     {
         title: "Digital Transformation",
@@ -198,6 +203,7 @@ export const services: Service[] = [
         ],
         isFeatured: true,
         displayOrder: 5,
+        imageUrl: "/Solution - Digital Transformation.png",
     },
 ];
 const expertiseTitles = [
