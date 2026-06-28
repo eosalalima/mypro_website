@@ -1,1 +1,61 @@
-import Link from "next/link";export function HeroSection(){return <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950 px-4 py-20 text-white sm:px-6 lg:px-8"><div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,#fbbf24,transparent_25%),radial-gradient(circle_at_80%_0%,#60a5fa,transparent_25%)]"/><div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2"><div><div className="mb-6 inline-flex rounded-full border border-amber-300/40 bg-white/10 px-4 py-2 text-sm font-bold text-amber-200">MyPro Solutions · Making IT Simple</div><h1 className="text-4xl font-black tracking-tight sm:text-6xl">Information Technology Solutions Provider</h1><p className="mt-6 text-xl leading-8 text-blue-100">MyPro Solutions helps businesses simplify technology through reliable IT infrastructure, cybersecurity, managed services, computing solutions, and digital transformation services.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="/solutions" className="rounded-full bg-amber-400 px-6 py-3 text-center font-black text-blue-950 hover:bg-amber-300">Explore Solutions</Link><Link href="/contact" className="rounded-full border border-white/30 px-6 py-3 text-center font-black text-white hover:bg-white/10">Contact Us</Link></div></div><div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur"><div className="grid h-80 place-items-center rounded-[1.5rem] bg-slate-950/70 p-8 text-center"><div><div className="mx-auto grid h-24 w-24 place-items-center rounded-3xl bg-amber-400 text-3xl font-black text-blue-950">MP</div><p className="mt-6 text-2xl font-black">Integrated IT Solutions</p><p className="mt-2 text-blue-100">Infrastructure · Security · Cloud-ready operations · Managed expertise</p></div></div></div></div></section>}
+import Link from "next/link";
+import Image from "next/image";
+
+export function HeroSection() {
+    return (
+        <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950 px-4 py-20 text-white sm:px-6 lg:px-8">
+            <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,#fbbf24,transparent_25%),radial-gradient(circle_at_80%_0%,#60a5fa,transparent_25%)]" />
+            <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+                <div>
+                    <div className="mb-6 inline-flex rounded-full border border-amber-300/40 bg-white/10 px-4 py-2 text-sm font-bold text-amber-200">
+                        MyPro Solutions · Making IT Simple
+                    </div>
+                    <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
+                        Information Technology Solutions Provider
+                    </h1>
+                    <p className="mt-6 text-xl leading-8 text-blue-100">
+                        MyPro Solutions helps businesses simplify technology
+                        through reliable IT infrastructure, cybersecurity,
+                        managed services, computing solutions, and digital
+                        transformation services.
+                    </p>
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <Link
+                            href="/solutions"
+                            className="rounded-full bg-amber-400 px-6 py-3 text-center font-black text-blue-950 hover:bg-amber-300"
+                        >
+                            Explore Solutions
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="rounded-full border border-white/30 px-6 py-3 text-center font-black text-white hover:bg-white/10"
+                        >
+                            Contact Us
+                        </Link>
+                    </div>
+                </div>
+                <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur">
+                    <div className="grid h-80 place-items-center rounded-[1.5rem] bg-slate-950/70 p-8 text-center">
+                        <div>
+                            <div className="mx-auto grid h-48 w-48 place-items-center rounded-3xl bg-white text-3xl font-black text-blue-950">
+                                <Image
+                                    src="/Logo.png"
+                                    alt="MyPro Solutions Logo"
+                                    width={396}
+                                    height={396}
+                                />
+                            </div>
+                            <p className="mt-6 text-2xl font-black">
+                                Integrated IT Solutions
+                            </p>
+                            <p className="mt-2 text-blue-100">
+                                Infrastructure · Security · Cloud-ready
+                                operations · Managed expertise
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

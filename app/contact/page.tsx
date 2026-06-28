@@ -1,2 +1,43 @@
-import { PageShell } from "@/components/public/PageShell";import { SectionHeader } from "@/components/public/SectionHeader";import { ContactForm } from "@/components/public/ContactForm";import { company } from "@/lib/content";
-export default function Contact(){return <PageShell><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2"><div><SectionHeader eyebrow="Contact" title="Let’s simplify your IT requirements." description="Reach out to MyPro Solutions for infrastructure, cybersecurity, managed services, product sourcing, and transformation needs."/><div className="mt-8 grid gap-4 text-slate-700"><p><b>Company:</b> {company.companyName}</p><p><b>Email:</b> {company.email}</p><p><b>Phone:</b> {company.phoneNumbers.join(' / ')}</p><p><b>Website:</b> {company.website}</p><p><b>Social:</b> {company.socialLinks.join(' · ')} placeholders</p></div><div className="mt-8 grid h-64 place-items-center rounded-3xl bg-slate-100 font-bold text-slate-500">Map Placeholder</div></div><ContactForm/></div></section></PageShell>}
+import { PageShell } from "@/components/public/PageShell";
+import { SectionHeader } from "@/components/public/SectionHeader";
+import { ContactForm } from "@/components/public/ContactForm";
+import { company } from "@/lib/content";
+export default function Contact() {
+    return (
+        <PageShell>
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+                    <div>
+                        <SectionHeader
+                            eyebrow="Contact"
+                            title="Let’s simplify your IT requirements."
+                            description="Reach out to MyPro Solutions for infrastructure, cybersecurity, managed services, product sourcing, and transformation needs."
+                        />
+                        <div className="mt-8 grid gap-4 text-slate-700">
+                            <p>
+                                <b>Company:</b> {company.companyName}
+                            </p>
+                            <p>
+                                <b>Email:</b> {company.email}
+                            </p>
+                            <p>
+                                <b>Phone:</b> {company.phoneNumbers.join(" / ")}
+                            </p>
+                            <p>
+                                <b>Website:</b> {company.website}
+                            </p>
+                            <p>
+                                <b>Social:</b> {company.socialLinks.join(" · ")}{" "}
+                                placeholders
+                            </p>
+                        </div>
+                        <div className="mt-8 grid h-64 place-items-center rounded-3xl bg-slate-100 font-bold text-slate-500">
+                            Map Placeholder
+                        </div>
+                    </div>
+                    <ContactForm />
+                </div>
+            </section>
+        </PageShell>
+    );
+}

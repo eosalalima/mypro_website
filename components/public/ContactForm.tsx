@@ -1,1 +1,53 @@
-export function ContactForm(){return <form className="grid gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"><div><label className="text-sm font-bold text-slate-700" htmlFor="name">Name</label><input id="name" className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Your name"/></div><div><label className="text-sm font-bold text-slate-700" htmlFor="email">Email</label><input id="email" type="email" className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="you@example.com"/></div><div><label className="text-sm font-bold text-slate-700" htmlFor="message">Message</label><textarea id="message" rows={5} className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3" placeholder="Tell us about your IT requirement"/></div><button type="button" className="rounded-full bg-blue-900 px-6 py-3 font-black text-white hover:bg-blue-800">Send Inquiry</button></form>}
+export function ContactForm() {
+    return (
+        <form className="grid gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div>
+                <label
+                    className="text-sm font-bold text-slate-700"
+                    htmlFor="name"
+                >
+                    Name
+                </label>
+                <input
+                    id="name"
+                    className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
+                    placeholder="Your name"
+                />
+            </div>
+            <div>
+                <label
+                    className="text-sm font-bold text-slate-700"
+                    htmlFor="email"
+                >
+                    Email
+                </label>
+                <input
+                    id="email"
+                    type="email"
+                    className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
+                    placeholder="you@example.com"
+                />
+            </div>
+            <div>
+                <label
+                    className="text-sm font-bold text-slate-700"
+                    htmlFor="message"
+                >
+                    Message
+                </label>
+                <textarea
+                    id="message"
+                    rows={5}
+                    className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3"
+                    placeholder="Tell us about your IT requirement"
+                />
+            </div>
+            <button
+                type="button"
+                className="rounded-full bg-blue-900 px-6 py-3 font-black text-white hover:bg-blue-800"
+            >
+                Send Inquiry
+            </button>
+        </form>
+    );
+}

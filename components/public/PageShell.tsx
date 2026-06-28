@@ -1,1 +1,11 @@
-import {Navbar} from "./Navbar";import {Footer} from "./Footer";export function PageShell({children}:{children:React.ReactNode}){return <><Navbar/><main>{children}</main><Footer/></>}
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
+export function PageShell({ children }: { children: React.ReactNode }) {
+    return (
+        <>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+        </>
+    );
+}

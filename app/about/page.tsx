@@ -1,2 +1,55 @@
-import { PageShell } from "@/components/public/PageShell";import { SectionHeader } from "@/components/public/SectionHeader";import { CTASection } from "@/components/public/CTASection";import { company } from "@/lib/content";
-export default function About(){const blocks=[['Who We Are','MyPro is a specialized Information Technology firm with extensive experience in consultancy and systems integration at its core.'],['Mission',company.mission],['Vision',company.vision],['What We Do','We establish network and server infrastructure, develop and deploy applications, supply software and hardware peripherals, and deliver integrated IT solutions.'],['Our Approach','We keep technology practical, reliable, and cost-effective while following our principle of Making IT Simple.'],['Why Clients Choose Us','Clients choose MyPro for clear guidance, responsive support, partner-backed product lines, and end-to-end IT delivery.']];return <PageShell><section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="About MyPro" title="A trusted technology partner focused on simple, reliable IT" description="The organization has evolved from infrastructure, applications, software, and hardware delivery into a recognized supplier of integrated IT solutions."/></div></section><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">{blocks.map(([t,d])=><article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" key={t}><h2 className="text-2xl font-black text-blue-950">{t}</h2><p className="mt-4 leading-7 text-slate-600">{d}</p></article>)}</div></section><CTASection/></PageShell>}
+import { PageShell } from "@/components/public/PageShell";
+import { SectionHeader } from "@/components/public/SectionHeader";
+import { CTASection } from "@/components/public/CTASection";
+import { company } from "@/lib/content";
+export default function About() {
+    const blocks = [
+        [
+            "Who We Are",
+            "MyPro is a specialized Information Technology firm with extensive experience in consultancy and systems integration at its core.",
+        ],
+        ["Mission", company.mission],
+        ["Vision", company.vision],
+        [
+            "What We Do",
+            "We establish network and server infrastructure, develop and deploy applications, supply software and hardware peripherals, and deliver integrated IT solutions.",
+        ],
+        [
+            "Our Approach",
+            "We keep technology practical, reliable, and cost-effective while following our principle of Making IT Simple.",
+        ],
+        [
+            "Why Clients Choose Us",
+            "Clients choose MyPro for clear guidance, responsive support, partner-backed product lines, and end-to-end IT delivery.",
+        ],
+    ];
+    return (
+        <PageShell>
+            <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader
+                        eyebrow="About MyPro"
+                        title="A trusted technology partner focused on simple, reliable IT"
+                        description="The organization has evolved from infrastructure, applications, software, and hardware delivery into a recognized supplier of integrated IT solutions."
+                    />
+                </div>
+            </section>
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {blocks.map(([t, d]) => (
+                        <article
+                            className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+                            key={t}
+                        >
+                            <h2 className="text-2xl font-black text-blue-950">
+                                {t}
+                            </h2>
+                            <p className="mt-4 leading-7 text-slate-600">{d}</p>
+                        </article>
+                    ))}
+                </div>
+            </section>
+            <CTASection />
+        </PageShell>
+    );
+}

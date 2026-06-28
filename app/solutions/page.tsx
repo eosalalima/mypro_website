@@ -1,2 +1,37 @@
-import { PageShell } from "@/components/public/PageShell";import { SectionHeader } from "@/components/public/SectionHeader";import { ServiceCard } from "@/components/public/Cards";import { CTASection } from "@/components/public/CTASection";import { services } from "@/lib/content";
-export default function Solutions(){return <PageShell><section className="bg-blue-950 px-4 py-20 text-white sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><p className="text-sm font-black uppercase tracking-[0.25em] text-amber-300">Solutions and services</p><h1 className="mt-3 text-4xl font-black">Integrated IT solutions for modern organizations</h1><p className="mt-5 max-w-3xl text-lg text-blue-100">MyPro covers the full lifecycle of business technology from consulting and design to deployment, support, and improvement.</p></div></section><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader title="Main service categories"/><div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map(s=><ServiceCard key={s.slug} item={s}/>)}</div></div></section><CTASection/></PageShell>}
+import { PageShell } from "@/components/public/PageShell";
+import { SectionHeader } from "@/components/public/SectionHeader";
+import { ServiceCard } from "@/components/public/Cards";
+import { CTASection } from "@/components/public/CTASection";
+import { services } from "@/lib/content";
+export default function Solutions() {
+    return (
+        <PageShell>
+            <section className="bg-blue-950 px-4 py-20 text-white sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <p className="text-sm font-black uppercase tracking-[0.25em] text-amber-300">
+                        Solutions and services
+                    </p>
+                    <h1 className="mt-3 text-4xl font-black">
+                        Integrated IT solutions for modern organizations
+                    </h1>
+                    <p className="mt-5 max-w-3xl text-lg text-blue-100">
+                        MyPro covers the full lifecycle of business technology
+                        from consulting and design to deployment, support, and
+                        improvement.
+                    </p>
+                </div>
+            </section>
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader title="Main service categories" />
+                    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {services.map((s) => (
+                            <ServiceCard key={s.slug} item={s} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <CTASection />
+        </PageShell>
+    );
+}

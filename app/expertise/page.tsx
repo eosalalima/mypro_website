@@ -1,2 +1,24 @@
-import { PageShell } from "@/components/public/PageShell";import { SectionHeader } from "@/components/public/SectionHeader";import { ExpertiseCard } from "@/components/public/Cards";import { expertise } from "@/lib/content";
-export default function Expertise(){return <PageShell><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Key expertise" title="Practical skills across infrastructure, security, software, and operations" description="MyPro combines technical delivery capability with partner-backed product knowledge."/><div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{expertise.map(e=><ExpertiseCard key={e.slug} item={e}/>)}</div></div></section></PageShell>}
+import { PageShell } from "@/components/public/PageShell";
+import { SectionHeader } from "@/components/public/SectionHeader";
+import { ExpertiseCard } from "@/components/public/Cards";
+import { expertise } from "@/lib/content";
+export default function Expertise() {
+    return (
+        <PageShell>
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader
+                        eyebrow="Key expertise"
+                        title="Practical skills across infrastructure, security, software, and operations"
+                        description="MyPro combines technical delivery capability with partner-backed product knowledge."
+                    />
+                    <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {expertise.map((e) => (
+                            <ExpertiseCard key={e.slug} item={e} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </PageShell>
+    );
+}

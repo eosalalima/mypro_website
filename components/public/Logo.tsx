@@ -1,2 +1,18 @@
 import Link from "next/link";
-export function Logo(){return <Link href="/" className="flex items-center gap-3"><span className="grid h-11 w-11 place-items-center rounded-xl bg-blue-900 text-sm font-black text-amber-300 shadow-sm">MP</span><span><span className="block text-lg font-black tracking-tight text-blue-950">MyPro Solutions</span><span className="block text-xs font-semibold uppercase tracking-[0.22em] text-amber-600">Making IT Simple</span></span></Link>}
+export function Logo() {
+    return (
+        <Link href="/" className="flex items-center gap-3">
+            <span className="grid h-11 w-11 place-items-center rounded-xl bg-blue-900 text-sm font-black text-amber-300 shadow-sm">
+                MP
+            </span>
+            <span>
+                <span className="block text-lg font-black tracking-tight text-blue-950">
+                    MyPro Solutions
+                </span>
+                <span className="block text-xs font-semibold uppercase tracking-[0.22em] text-amber-600">
+                    Making IT Simple
+                </span>
+            </span>
+        </Link>
+    );
+}

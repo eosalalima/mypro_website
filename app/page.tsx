@@ -1,2 +1,98 @@
-import { PageShell } from "@/components/public/PageShell";import { HeroSection } from "@/components/public/HeroSection";import { SectionHeader } from "@/components/public/SectionHeader";import { ServiceCard, ExpertiseCard, ProductLineCard, TestimonialCard } from "@/components/public/Cards";import { CTASection } from "@/components/public/CTASection";import { company, expertise, productLines, services, testimonials } from "@/lib/content";
-export default function Home(){return <PageShell><HeroSection/><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Core solutions" title="Technology services built for dependable business operations" description={company.description}/><div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.filter(s=>s.isFeatured).map(s=><ServiceCard key={s.slug} item={s}/>)}</div></div></section><section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Key expertise" title="From structured cabling to managed IT support" center/><div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">{expertise.slice(0,6).map(e=><ExpertiseCard key={e.slug} item={e}/>)}</div></div></section><section className="px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto max-w-7xl"><SectionHeader eyebrow="Product lines" title="Partner-backed product categories" description="MyPro works with leading technology brands across infrastructure, cybersecurity, computing, power, software, surveillance, and sustainable energy."/><div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{productLines.filter(p=>p.isFeatured).slice(0,3).map(p=><ProductLineCard key={p.slug} item={p}/>)}</div></div></section><section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2"><div><SectionHeader eyebrow="Why choose MyPro" title="Professional, practical, and simple IT delivery"/><div className="mt-8 grid gap-4">{["Consultancy and systems integration experience","Cost-effective solution design and product sourcing","Coverage from infrastructure to managed services","Technology guidance that keeps requirements clear"].map(x=><div className="rounded-2xl bg-white p-5 font-semibold text-slate-700 shadow-sm" key={x}>✓ {x}</div>)}</div></div><TestimonialCard item={testimonials[0]}/></div></section><CTASection/></PageShell>}
+import { PageShell } from "@/components/public/PageShell";
+import { HeroSection } from "@/components/public/HeroSection";
+import { SectionHeader } from "@/components/public/SectionHeader";
+import {
+    ServiceCard,
+    ExpertiseCard,
+    ProductLineCard,
+    TestimonialCard,
+} from "@/components/public/Cards";
+import { CTASection } from "@/components/public/CTASection";
+import {
+    company,
+    expertise,
+    productLines,
+    services,
+    testimonials,
+} from "@/lib/content";
+export default function Home() {
+    return (
+        <PageShell>
+            <HeroSection />
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader
+                        eyebrow="Core solutions"
+                        title="Technology services built for dependable business operations"
+                        description={company.description}
+                    />
+                    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {services
+                            .filter((s) => s.isFeatured)
+                            .map((s) => (
+                                <ServiceCard key={s.slug} item={s} />
+                            ))}
+                    </div>
+                </div>
+            </section>
+            <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader
+                        eyebrow="Key expertise"
+                        title="From structured cabling to managed IT support"
+                        center
+                    />
+                    <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {expertise.slice(0, 6).map((e) => (
+                            <ExpertiseCard key={e.slug} item={e} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <section className="px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto max-w-7xl">
+                    <SectionHeader
+                        eyebrow="Product lines"
+                        title="Partner-backed product categories"
+                        description="MyPro works with leading technology brands across infrastructure, cybersecurity, computing, power, software, surveillance, and sustainable energy."
+                    />
+                    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {productLines
+                            .filter((p) => p.isFeatured)
+                            .slice(0, 3)
+                            .map((p) => (
+                                <ProductLineCard key={p.slug} item={p} />
+                            ))}
+                    </div>
+                </div>
+            </section>
+            <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+                    <div>
+                        <SectionHeader
+                            eyebrow="Why choose MyPro"
+                            title="Professional, practical, and simple IT delivery"
+                        />
+                        <div className="mt-8 grid gap-4">
+                            {[
+                                "Consultancy and systems integration experience",
+                                "Cost-effective solution design and product sourcing",
+                                "Coverage from infrastructure to managed services",
+                                "Technology guidance that keeps requirements clear",
+                            ].map((x) => (
+                                <div
+                                    className="rounded-2xl bg-white p-5 font-semibold text-slate-700 shadow-sm"
+                                    key={x}
+                                >
+                                    ✓ {x}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <TestimonialCard item={testimonials[0]} />
+                </div>
+            </section>
+            <CTASection />
+        </PageShell>
+    );
+}
