@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export function HeroSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950 px-4 py-20 text-white sm:px-6 lg:px-8">
+        <section
+            className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-slate-950 px-4 py-20 text-white sm:px-6 lg:px-8"
+            style={{ backgroundImage: "url('/banner.png')" }}
+        >
             <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_20%,#fbbf24,transparent_25%),radial-gradient(circle_at_80%_0%,#60a5fa,transparent_25%)]" />
             <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
                 <div>
@@ -34,7 +37,7 @@ export function HeroSection() {
                         </Link>
                     </div>
                 </div>
-                <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur">
+                {/* <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur">
                     <div className="grid h-80 place-items-center rounded-[1.5rem] bg-slate-950/70 p-8 text-center">
                         <div>
                             <div className="mx-auto grid h-48 w-48 place-items-center rounded-3xl bg-white text-3xl font-black text-blue-950">
@@ -54,7 +57,7 @@ export function HeroSection() {
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
